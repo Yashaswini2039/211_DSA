@@ -4,7 +4,11 @@
 
 int binarysearch (int a[], int n , int x , int s , int e)
 {
-    int mid = (e-s)/2 ;
+    if (s>e)
+    {
+        return 0 ;
+    }
+    int mid = (e+s)/2 ;
     if(x== a[mid] || x==a[e] || x==a[s])
         return 1 ;
     
